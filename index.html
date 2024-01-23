@@ -3,13 +3,22 @@
   <head>
     <title id="name">Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
   <body>
     <div id="weather_container">
-      <div id="location_from"></div>
-      <input type="text" id="location_input" required="required">
-      <input type="button"  value="Search" id="search_Btn">
-      <div id="weather_data"></div>
+      <div class="heading">
+        <h2>Weather App</h2>
+      </div>
+      <div id="location_from">
+          <input type="text" placeholder="Enter your city name .." name="search" id="location_input">
+          <button type="submit" id="search_Btn"><i class="fa fa-search"></i>Search</button>
+      </div>
+      <div id="weather_data">
+        <h2 id="data_name"></h2>
+        <div id="data_details"></div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

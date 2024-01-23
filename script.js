@@ -1,6 +1,9 @@
 const location_input=document.getElementById("location_input");
 const search_Btn=document.getElementById("search_Btn");
 const weather_data=document.getElementById("weather_data");
+const data_name=document.getElementById("data_name");
+const data_details=document.getElementById("data_details");
+
 
 
 // const request_url=`http://api.weatherapi.com/v1/current.json?key=1da33a757e3043d98be131231230103&q=$london&aqi=yes`
@@ -17,21 +20,15 @@ search_Btn.addEventListener('click',async()=>{
   const City_Name=location_input.value;
   const data=await getWheather(City_Name);
   console.log(data);
+  if(data.name==undefined){
+    data_name.innerHTML=`City not found`;
+    data_details.innerText=``;
+  }
 
-  const data_=document.createElement("div")
-  weather_data.className="weather_data";
-  weather_container.prepend(weather_data);
-
-  const data_name=document.createElement("h2");
-  data_name.className="data_name"; 
-  weather_data.appendChild(data_name)
-  data_name.innerText=`Weather of ${data.name}`;
-
-  const data_details=document.createElement("div");
-  data_details.className="data_details";
-  weather_data.appendChild(data_details)
-  data_name.innerText=`Sky Conditions: ${data.weather[0].description}
+ else{ data_name.innerHTML=`Weather of ${data.name}`;
+  data_details.innerText=`Sky Conditions: ${data.weather[0].description}
                        Temperature: ${data.main.temp}C
-                       Wind Speed: ${data.wind.speed }km/h`;
+                       Humidity:${data.main.humidity}%
+                       Wind Speed: ${data.wind.speed }km/h`;}
 
 })
