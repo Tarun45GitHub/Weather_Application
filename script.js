@@ -11,7 +11,7 @@ const data_details=document.getElementById("data_details");
 
 async function getWheather(City_Name){
   const apiKey="267718b976e74b3e638e57314f7971b4"
-  const request_url=`http://api.openweathermap.org/data/2.5/weather?q=${City_Name}&appid=${apiKey}&units=metric`
+  const request_url=`httpS://api.openweathermap.org/data/2.5/weather?q=${City_Name}&appid=${apiKey}&units=metric`
   const response= await fetch(request_url);
   return await response.json();
 }
