@@ -47,6 +47,10 @@ document.querySelector(".search button")
           weathericon.src="img/rain.png";
           console.log("Drizzle");
           break;
+        case "Haze":
+          weathericon.src="img/haze.png";
+          console.log("Haze");
+          break;
         default:
          weathericon.src="";
 

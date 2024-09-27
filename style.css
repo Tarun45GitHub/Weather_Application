@@ -59,11 +59,11 @@ body{
   width: 25%;
 }
 .weather h1{
-  font-size: 80px;
+  font-size:5rem;
   font-weight: 400;
 }
 .weather h2{
-  font-size: 45px;
+  font-size: 3rem;
   font-weight: 500;
 }
 .details{
@@ -73,7 +73,7 @@ body{
   padding: 0 20px;
 }
 .col{
-  padding: 30px;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,9 +81,9 @@ body{
 }
 .col-icon{
   width: 15%;
-  margin-right: 20px;
+  margin-right: 1rem;
 }
 .humidity,.wind,.sky{
-  font-size: 28px;
+  font-size: 2rem;
   margin-bottom: 5px;
 }
