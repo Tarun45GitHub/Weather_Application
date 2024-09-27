@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title id="name">Weather App</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  </head>
-  <body>
-    <div id="weather_container">
-      <div class="heading">
-        <h2>Weather App</h2>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="shortcut icon" href="img/Weather_fabicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <div class="search">
+        <input type="text" placeholder="Enter your city name ...">
+        <button > <img class="serct" src="img/search-engine.png" alt=""></button>
       </div>
-      <div id="location_from">
-          <input type="text" placeholder="Enter your city name .." name="search" id="location_input">
-          <button type="submit" id="search_Btn"><i class="fa fa-search"></i>Search</button>
-      </div>
-      <div id="weather_data">
-        <h2 id="data_name"></h2>
-        <div id="data_details"></div>
+      <div class="weather">
+        <h3 class="sky"></h3>
+        <img src="img/heavy-rain.png" alt="" class="weathericon">
+        <h1 class="temp">22</h1>
+        <h2 class="city">city</h2>
+        <div class="details">
+          <div class="col">
+            <img src="img/humidity.png" alt="" class="col-icon">
+            <div>
+              <p class="humidity">50%</p>
+              <p>humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="img/windy.png" alt="" class="col-icon">
+            <div>
+              <p class="wind">30km\h</p>
+              <p>wind Speed</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+</body>
+<script src="script.js"></script>
 </html>
+<!-- https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key} -->
